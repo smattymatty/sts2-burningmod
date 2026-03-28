@@ -20,7 +20,7 @@ public class BurnBonusHitsVar : DynamicVar
 
     private int GetLiveValue()
     {
-        if (_owner is CardModel card && card.Owner?.Creature != null)
+        if (_owner is CardModel card && card.IsMutable && card.Owner?.Creature != null)
             return card.Owner.Creature.GetPowerAmount<AppliedThisTurnPower>();
         return 0;
     }

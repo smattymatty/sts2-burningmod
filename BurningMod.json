@@ -1,0 +1,11 @@
+{
+  "id": "BurningMod",
+  "name": "Burning Mod",
+  "author": "smattymatty",
+  "description": "Adds a Burn archetype to the Ironclad and Silent.",
+  "version": "v0.2.0",
+  "has_pck": true,
+  "has_dll": true,
+  "dependencies": ["BaseLib"],
+  "affects_gameplay": true
+}

@@ -1,0 +1,33 @@
+
+<Project Sdk="Godot.NET.Sdk/4.6.1">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <AssemblyName>BurningMod</AssemblyName>
+
+    <!-- Config -->
+    <ModName>BurningMod</ModName>
+    <GodotExePath>/home/mathew/Desktop/Godot_v4.5.1-stable_mono_linux_x86_64/Godot_v4.5.1-stable_mono_linux.x86_64</GodotExePath>    <GodotProject>/home/mathew/sts-2</GodotProject>
+    <ModsOutputDir>/home/mathew/snap/steam/common/.local/share/Steam/steamapps/common/Slay the Spire 2/mods/BurningMod</ModsOutputDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="sts2">
+        <HintPath>sts2.dll</HintPath>
+    </Reference>
+    <Reference Include="0Harmony">
+        <HintPath>0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseLib">
+        <HintPath>BaseLib.dll</HintPath>
+    </Reference>
+</ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="Build">
+    <MakeDir Directories="$(ModsOutputDir)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModsOutputDir)" />
+    <Exec Command="&quot;$(GodotExePath)&quot; --headless --path &quot;$(GodotProject)&quot; --export-pack &quot;Linux&quot; &quot;$(ModsOutputDir)/$(ModName).pck&quot;" />
+  </Target>
+</Project>

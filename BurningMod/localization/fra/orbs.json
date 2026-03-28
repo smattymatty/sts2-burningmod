@@ -1,0 +1,8 @@
+{
+  "BURNINGMOD-FIRE_ORB.title": "Fire Orb",
+  "BURNINGMOD-FIRE_ORB.description": "At the end of your turn, deal damage equal to Focus to a random enemy and apply [gold]Burn[/gold] equal to Focus. Evoke: Deal damage equal to Focus and apply [gold]Burn[/gold] equal to Focus to a random enemy.",
+  "BURNINGMOD-FIRE_ORB.smartDescription": "At the end of your turn, deal {Passive} damage to a random enemy. Apply {Passive} [gold]Burn[/gold] to that enemy.\nEvoke: Deal {Evoke} damage and apply {Evoke} [gold]Burn[/gold] to a random enemy.",
+  "BURNINGMOD-INFERNO_ORB.title": "Inferno Orb",
+  "BURNINGMOD-INFERNO_ORB.description": "Counts as a [gold]Fire Orb[/gold]. Passive: Deal 4 damage and apply 4 [gold]Burn[/gold] to ALL enemies. Evoke: ALL enemies lose HP equal to their [gold]Burn[/gold] stacks.",
+  "BURNINGMOD-INFERNO_ORB.smartDescription": "Counts as a [gold]Fire Orb[/gold].\nPassive: Deal {Passive} damage and apply {Passive} [gold]Burn[/gold] to ALL enemies.\nEvoke: ALL enemies take unblockable damage equal to their [gold]Burn[/gold] stacks."
+}
